@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1;
+    color: #2c3e50;
   }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navbar Styles */
+ /* Navbar.css */
+.navbar {
+  background-color: #3498db; /* Primary color */
+  padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-icon {
+  display: none; /* Hide menu icon by default */
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  background-color: #2980b9; /* Darker blue for hover effect */
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon on small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #3498db;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+    border-bottom: 1px solid #ecf0f1;
   }
 }
+
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3498db;
+    color: #ecf0f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* HomePage Styles */
+  .homepage {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .homepage h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .homepage p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .homepage button {
+    background-color: #2ecc71;
+    border: none;
+    color: #ecf0f1;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .homepage button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Dashboard Styles */
+  /* Common Dashboard Styles */
+.dashboard-container {
+    padding: 2rem;
+  }
+  
+  .dashboard-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-content {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-button {
+    background-color: #2ecc71;
+    border: none;
+    color: #ecf0f1;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Technicians Directory Styles */
+ /* Directory and Listings Styles */
+.directory-listings-container {
+  padding: 2rem;
+}
+
+.directory-listings-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.directory-listings-content {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-button {
+  background-color: #3498db;
+  border: none;
+  color: #ecf0f1;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+  
+  /* About Us Styles */
+  .about-us {
+    padding: 2rem;
+  }
+  
+  .about-us h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us p {
+    font-size: 1.2rem;
+  }
+  
+  /* About Us, Contact Us, and FAQs Styles */
+.info-page {
+  padding: 2rem;
+}
+
+.info-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-content {
+  font-size: 1.2rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  border: none;
+  color: #ecf0f1;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
+
+  .homepage h1, .dashboard-header, .directory-listings-header, .info-header {
+    font-size: 1.5rem;
+  }
+
+  .homepage p, .dashboard-content, .directory-listings-content, .info-content {
+    font-size: 1rem;
+  }
+
+  .search-input, .contact-form input, .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
+}
+
